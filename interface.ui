@@ -62,7 +62,7 @@
                  <item row="0" column="0">
                   <layout class="QGridLayout" name="signalGridLayout">
                    <item row="0" column="0">
-                    <widget class="QWidget" name="instFreqGraph" native="true">
+                    <widget class="MplWidget" name="instFreqGraph" native="true">
                      <property name="styleSheet">
                       <string notr="true"/>
                      </property>
@@ -85,7 +85,7 @@
                     </spacer>
                    </item>
                    <item row="0" column="2">
-                    <widget class="QWidget" name="instPhaseGraph" native="true">
+                    <widget class="MplWidget" name="instPhaseGraph" native="true">
                      <property name="styleSheet">
                       <string notr="true"/>
                      </property>
@@ -124,7 +124,7 @@
                     </spacer>
                    </item>
                    <item row="2" column="2">
-                    <widget class="QWidget" name="signalGraph" native="true">
+                    <widget class="MplWidget" name="signalGraph" native="true">
                      <property name="styleSheet">
                       <string notr="true"/>
                      </property>
@@ -147,7 +147,7 @@
                     </spacer>
                    </item>
                    <item row="2" column="0">
-                    <widget class="QWidget" name="envelopeGraph" native="true">
+                    <widget class="MplWidget" name="envelopeGraph" native="true">
                      <property name="autoFillBackground">
                       <bool>false</bool>
                      </property>
@@ -168,7 +168,7 @@
                  <item>
                   <layout class="QVBoxLayout" name="envelopeVertLayouts">
                    <item>
-                    <widget class="QWidget" name="ampRangeGraph" native="true"/>
+                    <widget class="MplWidget" name="ampRangeGraph" native="true"/>
                    </item>
                    <item>
                     <spacer name="envelopeVertSpacer">
@@ -187,7 +187,7 @@
                     </spacer>
                    </item>
                    <item>
-                    <widget class="QWidget" name="autoCorrelationGraph" native="true"/>
+                    <widget class="MplWidget" name="autoCorrelationGraph" native="true"/>
                    </item>
                   </layout>
                  </item>
@@ -203,7 +203,7 @@
                    <item>
                     <layout class="QVBoxLayout" name="ambigutyLayout3D">
                      <item>
-                      <widget class="QWidget" name="ambigutyGraph3D" native="true"/>
+                      <widget class="MplWidget" name="ambigutyGraph3D" native="true"/>
                      </item>
                     </layout>
                    </item>
@@ -226,10 +226,10 @@
                    <item>
                     <layout class="QGridLayout" name="projectionLayouts">
                      <item row="0" column="0">
-                      <widget class="QWidget" name="tauProjectionGraph" native="true"/>
+                      <widget class="MplWidget" name="tauProjectionGraph" native="true"/>
                      </item>
                      <item row="0" column="2">
-                      <widget class="QWidget" name="freqProjectionGraph" native="true"/>
+                      <widget class="MplWidget" name="freqProjectionGraph" native="true"/>
                      </item>
                      <item row="0" column="1">
                       <spacer name="projectionHorSpacer">
@@ -533,6 +533,14 @@
    </property>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MplWidget</class>
+   <extends>QWidget</extends>
+   <header>mplwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
  <designerdata>
