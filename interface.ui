@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>mainWindow</class>
- <widget class="QMainWindow" name="mainWindow">
+ <class>mainLabWindow</class>
+ <widget class="QMainWindow" name="mainLabWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -25,10 +25,10 @@
   <property name="windowTitle">
    <string>Исследование импульсных сигналов с частотной модуляцией</string>
   </property>
-  <widget class="QWidget" name="centralwidget">
+  <widget class="QWidget" name="mainLabWidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QLabel" name="label_4">
+     <widget class="QLabel" name="titleLab">
       <property name="text">
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;Лабораторная работа №5&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Исследование импульсных сигналов с частотной модуляцией&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
@@ -38,37 +38,116 @@
      </widget>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="MainHorizontalLayout">
+     <layout class="QHBoxLayout" name="workHorizontalLayout">
       <item>
-       <layout class="QVBoxLayout" name="verticalLayout_3">
+       <layout class="QVBoxLayout" name="graphLayout">
         <item>
-         <widget class="QGroupBox" name="groupBox">
+         <widget class="QGroupBox" name="graphGroupBox">
           <property name="title">
            <string>Графики</string>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_5">
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_4">
+            <layout class="QVBoxLayout" name="graphLayouts">
              <item>
-              <widget class="QTabWidget" name="tabWidget">
+              <widget class="QTabWidget" name="graphTabWidget">
                <property name="currentIndex">
                 <number>0</number>
                </property>
-               <widget class="QWidget" name="tab">
+               <widget class="QWidget" name="signalTab">
                 <attribute name="title">
                  <string>Радиосигнал</string>
                 </attribute>
                 <layout class="QGridLayout" name="gridLayout_2">
                  <item row="0" column="0">
-                  <layout class="QGridLayout" name="gridLayout">
-                   <item row="1" column="1">
-                    <widget class="QWidget" name="widget" native="true"/>
+                  <layout class="QGridLayout" name="signalGridLayout">
+                   <item row="0" column="0">
+                    <widget class="QWidget" name="instFreqGraph" native="true">
+                     <property name="styleSheet">
+                      <string notr="true"/>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <spacer name="signalHorSpacer1">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Fixed</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>5</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="0" column="2">
+                    <widget class="QWidget" name="instPhaseGraph" native="true">
+                     <property name="styleSheet">
+                      <string notr="true"/>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="1">
+                    <spacer name="signalHorSpacer2">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Fixed</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>5</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="1" column="2">
+                    <spacer name="signalVerSpacer2">
+                     <property name="orientation">
+                      <enum>Qt::Vertical</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Fixed</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>20</width>
+                       <height>5</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="2" column="2">
+                    <widget class="QWidget" name="signalGraph" native="true">
+                     <property name="styleSheet">
+                      <string notr="true"/>
+                     </property>
+                    </widget>
                    </item>
                    <item row="1" column="0">
-                    <widget class="QWidget" name="widget_2" native="true"/>
+                    <spacer name="signalVerSpacer1">
+                     <property name="orientation">
+                      <enum>Qt::Vertical</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Fixed</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>20</width>
+                       <height>5</height>
+                      </size>
+                     </property>
+                    </spacer>
                    </item>
-                   <item row="0" column="0">
-                    <widget class="QWidget" name="widget_3" native="true">
+                   <item row="2" column="0">
+                    <widget class="QWidget" name="envelopeGraph" native="true">
                      <property name="autoFillBackground">
                       <bool>false</bool>
                      </property>
@@ -77,51 +156,96 @@
                      </property>
                     </widget>
                    </item>
-                   <item row="0" column="1">
-                    <widget class="QWidget" name="widget_4" native="true"/>
-                   </item>
                   </layout>
                  </item>
                 </layout>
                </widget>
-               <widget class="QWidget" name="tab_2">
+               <widget class="QWidget" name="envelopeTab">
                 <attribute name="title">
                  <string>Комплексная огибающая</string>
                 </attribute>
                 <layout class="QVBoxLayout" name="verticalLayout_15">
                  <item>
-                  <layout class="QVBoxLayout" name="verticalLayout_14">
+                  <layout class="QVBoxLayout" name="envelopeVertLayouts">
                    <item>
-                    <widget class="QWidget" name="widget_5" native="true"/>
+                    <widget class="QWidget" name="ampRangeGraph" native="true"/>
                    </item>
                    <item>
-                    <widget class="QWidget" name="widget_6" native="true"/>
+                    <spacer name="envelopeVertSpacer">
+                     <property name="orientation">
+                      <enum>Qt::Vertical</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Fixed</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>20</width>
+                       <height>5</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <widget class="QWidget" name="autoCorrelationGraph" native="true"/>
                    </item>
                   </layout>
                  </item>
                 </layout>
                </widget>
-               <widget class="QWidget" name="tab_3">
+               <widget class="QWidget" name="ambiguityTab">
                 <attribute name="title">
                  <string>Функция неопределённости</string>
                 </attribute>
                 <layout class="QVBoxLayout" name="verticalLayout_17">
                  <item>
-                  <layout class="QVBoxLayout" name="verticalLayout_16">
+                  <layout class="QVBoxLayout" name="ambigutyLayout">
                    <item>
-                    <layout class="QVBoxLayout" name="verticalLayout_18">
+                    <layout class="QVBoxLayout" name="ambigutyLayout3D">
                      <item>
-                      <widget class="QWidget" name="widget_7" native="true"/>
+                      <widget class="QWidget" name="ambigutyGraph3D" native="true"/>
                      </item>
                     </layout>
                    </item>
                    <item>
-                    <layout class="QGridLayout" name="gridLayout_4">
+                    <spacer name="ambVertSpacer">
+                     <property name="orientation">
+                      <enum>Qt::Vertical</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Fixed</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>20</width>
+                       <height>5</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <layout class="QGridLayout" name="projectionLayouts">
                      <item row="0" column="0">
-                      <widget class="QWidget" name="widget_8" native="true"/>
+                      <widget class="QWidget" name="tauProjectionGraph" native="true"/>
+                     </item>
+                     <item row="0" column="2">
+                      <widget class="QWidget" name="freqProjectionGraph" native="true"/>
                      </item>
                      <item row="0" column="1">
-                      <widget class="QWidget" name="widget_9" native="true"/>
+                      <spacer name="projectionHorSpacer">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeType">
+                        <enum>QSizePolicy::Fixed</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>5</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
                      </item>
                     </layout>
                    </item>
@@ -139,9 +263,9 @@
        </layout>
       </item>
       <item>
-       <layout class="QVBoxLayout" name="verticalLayout_2">
+       <layout class="QVBoxLayout" name="settingLayout">
         <item>
-         <widget class="QGroupBox" name="groupBox_2">
+         <widget class="QGroupBox" name="settingGroupBox">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
             <horstretch>0</horstretch>
@@ -162,9 +286,9 @@
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_7">
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_6">
+            <layout class="QVBoxLayout" name="settingBoxLayout">
              <item>
-              <widget class="QGroupBox" name="groupBox_4">
+              <widget class="QGroupBox" name="envelopeSetBox">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                  <horstretch>0</horstretch>
@@ -176,30 +300,30 @@
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_9">
                 <item>
-                 <layout class="QGridLayout" name="gridLayout_3">
+                 <layout class="QGridLayout" name="envelopeSetGrid">
                   <item row="1" column="0">
-                   <widget class="QRadioButton" name="radioButton_2">
+                   <widget class="QRadioButton" name="envelopeTriangle">
                     <property name="text">
                      <string>Треугольная</string>
                     </property>
                    </widget>
                   </item>
                   <item row="0" column="0">
-                   <widget class="QRadioButton" name="radioButton">
+                   <widget class="QRadioButton" name="envelopeRectangle">
                     <property name="text">
                      <string>Прямоугольная</string>
                     </property>
                    </widget>
                   </item>
                   <item row="0" column="1">
-                   <widget class="QRadioButton" name="radioButton_3">
+                   <widget class="QRadioButton" name="envelopeGauss">
                     <property name="text">
                      <string>Гауссова</string>
                     </property>
                    </widget>
                   </item>
                   <item row="1" column="1">
-                   <widget class="QRadioButton" name="radioButton_4">
+                   <widget class="QRadioButton" name="envelopeExp">
                     <property name="text">
                      <string>Экспоненциальная</string>
                     </property>
@@ -211,7 +335,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QGroupBox" name="groupBox_5">
+              <widget class="QGroupBox" name="durationSetBox">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                  <horstretch>0</horstretch>
@@ -223,9 +347,9 @@
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_11">
                 <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_2">
+                 <layout class="QHBoxLayout" name="durationLayout">
                   <item>
-                   <widget class="QDial" name="dial">
+                   <widget class="QDial" name="durationDial">
                     <property name="minimumSize">
                      <size>
                       <width>0</width>
@@ -244,9 +368,9 @@
                    </widget>
                   </item>
                   <item>
-                   <layout class="QVBoxLayout" name="verticalLayout_8">
+                   <layout class="QVBoxLayout" name="durationLayoutLCD">
                     <item>
-                     <spacer name="verticalSpacer_5">
+                     <spacer name="durationVerSpacerUp">
                       <property name="orientation">
                        <enum>Qt::Vertical</enum>
                       </property>
@@ -259,17 +383,20 @@
                      </spacer>
                     </item>
                     <item>
-                     <widget class="QLCDNumber" name="lcdNumber_3">
+                     <widget class="QLCDNumber" name="durationLCD">
                       <property name="minimumSize">
                        <size>
                         <width>108</width>
                         <height>40</height>
                        </size>
                       </property>
+                      <property name="styleSheet">
+                       <string notr="true"/>
+                      </property>
                      </widget>
                     </item>
                     <item>
-                     <spacer name="verticalSpacer_4">
+                     <spacer name="durationVerSpacerDown">
                       <property name="orientation">
                        <enum>Qt::Vertical</enum>
                       </property>
@@ -289,7 +416,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QGroupBox" name="groupBox_3">
+              <widget class="QGroupBox" name="deviationSetBox">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                  <horstretch>0</horstretch>
@@ -301,18 +428,18 @@
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_13">
                 <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_3">
+                 <layout class="QHBoxLayout" name="deviationLayout">
                   <item>
-                   <widget class="QDial" name="dial_2">
+                   <widget class="QDial" name="deviationDial">
                     <property name="styleSheet">
                      <string notr="true">background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 255), stop:0.19397 rgba(0, 0, 0, 255), stop:0.202312 rgba(122, 97, 0, 255), stop:0.495514 rgba(76, 58, 0, 255), stop:0.504819 rgba(255, 255, 255, 255), stop:0.79 rgba(255, 255, 255, 255), stop:1 rgba(255, 158, 158, 255));</string>
                     </property>
                    </widget>
                   </item>
                   <item>
-                   <layout class="QVBoxLayout" name="verticalLayout_10">
+                   <layout class="QVBoxLayout" name="deviationLayoutLCD">
                     <item>
-                     <spacer name="verticalSpacer_2">
+                     <spacer name="deviationVerSpacerUp">
                       <property name="orientation">
                        <enum>Qt::Vertical</enum>
                       </property>
@@ -325,7 +452,7 @@
                      </spacer>
                     </item>
                     <item>
-                     <widget class="QLCDNumber" name="lcdNumber">
+                     <widget class="QLCDNumber" name="deviationLCD">
                       <property name="minimumSize">
                        <size>
                         <width>0</width>
@@ -335,7 +462,7 @@
                      </widget>
                     </item>
                     <item>
-                     <spacer name="verticalSpacer">
+                     <spacer name="deviationVerSpacerDown">
                       <property name="orientation">
                        <enum>Qt::Vertical</enum>
                       </property>
@@ -387,20 +514,24 @@
      <height>21</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menu">
+   <widget class="QMenu" name="setting">
     <property name="title">
      <string>Настройки</string>
     </property>
    </widget>
-   <widget class="QMenu" name="menu_2">
+   <widget class="QMenu" name="info">
     <property name="title">
      <string>Информация</string>
     </property>
    </widget>
-   <addaction name="menu"/>
-   <addaction name="menu_2"/>
+   <addaction name="setting"/>
+   <addaction name="info"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
