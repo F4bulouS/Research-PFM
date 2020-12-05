@@ -343,7 +343,7 @@
                 </sizepolicy>
                </property>
                <property name="title">
-                <string>Длительность</string>
+                <string>Длительность, мс</string>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_11">
                 <item>
@@ -362,8 +362,17 @@
                     <property name="inputMethodHints">
                      <set>Qt::ImhNone</set>
                     </property>
+                    <property name="minimum">
+                     <number>1</number>
+                    </property>
                     <property name="maximum">
-                     <number>100</number>
+                     <number>10</number>
+                    </property>
+                    <property name="wrapping">
+                     <bool>false</bool>
+                    </property>
+                    <property name="notchesVisible">
+                     <bool>false</bool>
                     </property>
                    </widget>
                   </item>
@@ -424,7 +433,7 @@
                 </sizepolicy>
                </property>
                <property name="title">
-                <string>Девиация частоты</string>
+                <string>Девиация частоты, КГц</string>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_13">
                 <item>
@@ -433,6 +442,9 @@
                    <widget class="QDial" name="deviationDial">
                     <property name="styleSheet">
                      <string notr="true">background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 255), stop:0.19397 rgba(0, 0, 0, 255), stop:0.202312 rgba(122, 97, 0, 255), stop:0.495514 rgba(76, 58, 0, 255), stop:0.504819 rgba(255, 255, 255, 255), stop:0.79 rgba(255, 255, 255, 255), stop:1 rgba(255, 158, 158, 255));</string>
+                    </property>
+                    <property name="maximum">
+                     <number>250</number>
                     </property>
                    </widget>
                   </item>
