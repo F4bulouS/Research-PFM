@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'interface.ui'
+# Form implementation generated from reading ui file 'LabMainInterface.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.2
 #
@@ -10,7 +10,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-from MplWidget import MplWidget
+from pygui.MplWidget import MplWidget
 
 class Ui_mainLabWindow(object):
     def setupUi(self, mainLabWindow):

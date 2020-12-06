@@ -1,14 +1,13 @@
 import sys
 
-import numpy as np
 from PyQt5 import QtWidgets
 
-import interface
+from pygui import LabMainInterface
 from radiotech.chirp import PulseChirp
 
 
 # Описание класса основной программы
-class LabWork(QtWidgets.QMainWindow, interface.Ui_mainLabWindow):
+class LabWork(QtWidgets.QMainWindow, LabMainInterface.Ui_mainLabWindow):
     """
     Класс лабораторной работы по исследованию импульсных ЛЧМ-сигналов.
     """
