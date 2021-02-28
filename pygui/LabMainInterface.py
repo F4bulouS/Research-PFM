@@ -213,6 +213,7 @@ class Ui_mainLabWindow(object):
         self.deviationLayout.setObjectName("deviationLayout")
         self.deviationDial = QtWidgets.QDial(self.deviationSetBox)
         self.deviationDial.setStyleSheet("background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 255), stop:0.19397 rgba(0, 0, 0, 255), stop:0.202312 rgba(122, 97, 0, 255), stop:0.495514 rgba(76, 58, 0, 255), stop:0.504819 rgba(255, 255, 255, 255), stop:0.79 rgba(255, 255, 255, 255), stop:1 rgba(255, 158, 158, 255));")
+        self.deviationDial.setMinimum(1)
         self.deviationDial.setMaximum(250)
         self.deviationDial.setObjectName("deviationDial")
         self.deviationLayout.addWidget(self.deviationDial)
